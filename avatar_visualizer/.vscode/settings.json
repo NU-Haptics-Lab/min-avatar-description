@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/rohan/shaws/install/sr_robot_msgs/local/lib/python3.10/dist-packages",
+        "/home/rohan/shaws/install/shadow_visualizer/lib/python3.10/site-packages",
+        "/home/rohan/shaws/install/shadow_scripts/lib/python3.10/site-packages",
+        "/home/rohan/shaws/install/shadow_mapper/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/rohan/shaws/install/sr_robot_msgs/local/lib/python3.10/dist-packages",
+        "/home/rohan/shaws/install/shadow_visualizer/lib/python3.10/site-packages",
+        "/home/rohan/shaws/install/shadow_scripts/lib/python3.10/site-packages",
+        "/home/rohan/shaws/install/shadow_mapper/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

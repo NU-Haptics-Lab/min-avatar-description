@@ -1,0 +1,18 @@
+<robot name="abb_gofa" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="gofa_arm" params="use_fake_hardware:=true rws_ip:=192.168.1.1 rws_port:=80 gofa_prefix:=''">
+    <!-- Robot description -->
+    <xacro:include filename="$(find abb_gofa_support)/urdf/gofa_macro.xacro"/>
+    <xacro:abb_gofa prefix="${gofa_prefix}"/>
+
+    <!-- ros2_control -->
+    <xacro:include filename="$(find abb_gofa_support)/urdf/gofa.ros2_control.xacro" />
+    <xacro:abb_ros2_control
+      name="ABBMultiInterfaceHardware"
+      use_fake_hardware="${use_fake_hardware}"
+      rws_ip="${rws_ip}"
+      rws_port="${rws_port}"
+      prefix="${gofa_prefix}"
+      />
+  </xacro:macro>
+  <xacro:gofa_arm />
+</robot>

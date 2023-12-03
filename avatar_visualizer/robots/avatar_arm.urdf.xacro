@@ -1,0 +1,11 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="avatar_arm">
+
+    <xacro:include filename="$(find sr_description)/other/xacro/materials.urdf.xacro"/>
+    <xacro:include filename="$(find sr_description)/hand/xacro/hand.urdf.xacro"/>
+    <xacro:include filename="$(find sr_description)/other/xacro/gazebo.urdf.xacro"/>
+
+    <!-- Arms -->
+    <xacro:include filename="$(find avatar_visualizer)/robots/avatar_arm_macro.xacro"/>
+    <xacro:avatar_arm />
+
+</robot>

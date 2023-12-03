@@ -1,0 +1,14 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="avatar_arm">
+    <xacro:macro name="avatar_arm" >
+
+        <!-- Right Arm -->
+        <xacro:include filename="$(find abb_gofa_support)/urdf/gofa_macro.xacro"/>
+        <xacro:abb_gofa prefix="gofa2_"/>
+
+        <xacro:include filename="$(find avatar_visualizer)/robots/sr_hand_macro.xacro"/>
+        <xacro:shadow_hand hand_type="hand_e" hand_version="E3M5" side="right" 
+            fingers="all" tip_sensors="pst" mid_sensors="none" prox_sensors="none" palm_sensor="none" mounting_plate="false"
+        />
+
+    </xacro:macro>
+</robot>

@@ -1,0 +1,30 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+       xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+       xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+       xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+       name="shadowhand_motor">
+
+
+  <xacro:macro name="shadow_hand" params="hand_type hand_version side fingers tip_sensors mid_sensors prox_sensors palm_sensor mounting_plate">
+
+  <xacro:if value="${ side == 'right'}">
+    <joint name="rh_world_joint" type="fixed">
+      <parent link="gofa2_tool0" />
+      <child link="rh_forearm" />
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 3.14" />
+    </joint>
+  </xacro:if>
+  <xacro:if value="${ side == 'left'}">
+    <joint name="lh_world_joint" type="fixed">
+      <parent link="gofa1_tool0" />
+      <child link="lh_forearm" />
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+    </joint>
+  </xacro:if>
+  <xacro:sr_hand hand_type="${hand_type}" hand_version="${hand_version}" side="${side}"
+                 fingers="${fingers}" tip_sensors="${tip_sensors}" mid_sensors="${mid_sensors}"
+                 prox_sensors="${prox_sensors}" palm_sensor="${palm_sensor}" mounting_plate="${mounting_plate}"/>
+
+  </xacro:macro>
+
+</robot>
